@@ -1,0 +1,26 @@
+########################################
+# Run on localhost:
+########################################
+$ go run main.go
+    --> Starting web server on port 8080
+    http://localhost:8080/
+
+########################################
+# Create binary/executable:
+########################################
+$ go build -o rock-paper-scissors main.go
+
+########################################
+# Compile for Windows 10:
+########################################
+$ go build -o dist/rps-windows10 main.go
+
+########################################
+# Compile for Linux:
+########################################
+$ env GOOS=linux GOARCH=amd64 go build -o dist/rock-paper-scissors main.go
+
+########################################
+# Copy binary to Linode server:
+########################################
+$ scp rock-paper-scissors lee@<ip address>:/home/lee
